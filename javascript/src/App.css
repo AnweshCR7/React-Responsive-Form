@@ -1,0 +1,143 @@
+/* .App {
+  text-align: center;
+} */
+body {
+  font: normal 20px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background: #e65a52;
+  color: #fff;
+  padding: 50px;
+}
+.App-logo-div{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.stylish{
+  width: 100px; 
+  height: 100px; 
+  line-height: 100px; 
+  text-align: center;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*Form Styling*/
+.container {
+  width: 80%;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  /* margin: 0 auto; */
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+/* for stacking <600px width, 160 + 360 + 80 = 600px */
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 160px;
+  max-width: 300px;
+}
+
+.flex-outer > li > label + * {
+  flex: 1 0 225px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 10px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+::-webkit-input-placeholder{
+/* Chrome/Opera/Safari */
+  font-size: 18px;
+}
+textarea::-webkit-input-placeholder{
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+}
